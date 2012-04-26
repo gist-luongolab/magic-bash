@@ -1,3 +1,3 @@
-. ~/bin/dotfile/bash/env
-. ~/bin/dotfile/bash/config
-. ~/bin/dotfile/bash/aliases
+. ~/bin/magic-bash/bash/env
+. ~/bin/magic-bash/bash/config
+. ~/bin/magic-bash/bash/aliases
