@@ -1,0 +1,39 @@
+#Finder
+alias ff='open -a Firefox'
+#Process
+alias tu='top -o cpu' #cpu
+alias tm='top -o vsize' #memory
+
+
+function e(){
+  mvim $1 &
+}
+#Shell
+#Alias cd
+function cd() { 
+	command cd $1
+	ls -G 
+}
+function cdh() { 
+	cd ${HOME}
+	ls -G 
+}
+
+#erase extensions file
+function dext(){
+	for i in  $(ls -1 *.$1); do mv "$i" "$(echo $i |sed 's/\(.*\)\..*/\1/')";done
+}
+	
+#Alias list - ls
+alias ll='ls -lG'
+alias lla='ls -lah'
+alias ld='ls -alG -d */'
+#Alias misc
+alias h='history'
+function stat() {
+	history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
+}
+
+function fsl() {
+	sudo find / -name $1
+}

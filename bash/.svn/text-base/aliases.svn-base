@@ -1,0 +1,48 @@
+#Finder
+alias ff='open -a Firefox'
+#Process
+alias tu='top -o cpu' #cpu
+alias tm='top -o vsize' #memory
+
+#shortcut 
+alias proj='cd ~/Documents/projectWeb/llab/' #shortcut to projectWeb
+alias wpa='cd ~/Documents/BlueReply/progetti/agos/'
+alias wpf='cd ~/Documents/BlueReply/progetti/mobile/'
+
+function e(){
+  mvim $1 &
+}
+#Shell
+#Alias cd
+function cd() { 
+	command cd $1
+	ls -G 
+}
+function cdh() { 
+	cd ${HOME}
+	ls -G 
+}
+
+#erase extensions file
+function dext(){
+	for i in  $(ls -1 *.$1); do mv "$i" "$(echo $i |sed 's/\(.*\)\..*/\1/')";done
+}
+#ssh
+alias sf='ssh root@192.168.10.1'
+function ssht(){
+	ssh -L 55550:localhost:55550 luigi_luca@luigiluongo.net 
+	
+}
+#Alias list - ls
+alias ll='ls -lG'
+alias lla='ls -lah'
+alias ld='ls -alG -d */'
+#Alias misc
+alias h='history'
+function stat() {
+	history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
+}
+
+function fsl() {
+	sudo find / -name $1
+}
