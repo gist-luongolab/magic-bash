@@ -1,3 +1,2 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-export EDITOR="mate -w"
-export PATH=$PATH:/opt/metasploit/trunk/:~/bin:~/bin/gsutil:/usr/local/mysql/bin:/usr/local/texlive/2010/bin/universal-darwin:/home/luigi/bin/st/:
+export PATH=$PATH:~/bin:~/bin/gsutil:/usr/local/mysql/bin:
